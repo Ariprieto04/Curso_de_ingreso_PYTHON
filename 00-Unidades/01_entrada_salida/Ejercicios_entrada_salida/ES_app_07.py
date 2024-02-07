@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre:Ariana
+apellido:Prieto
 ---
 Ejercicio: entrada_salida_07
 ---
@@ -49,16 +49,40 @@ class App(customtkinter.CTk):
         self.btn_dividir.grid(row=5, pady=10, columnspan=2, sticky="nsew")
 
     def btn_sumar_on_click(self):
-        pass
+        operador_a_texto=self.txt_operador_a.get()
+        operador_b_texto=self.txt_operador_b.get()
+        operador_a_numero=int(operador_a_texto)
+        operador_b_numero=int(operador_b_texto)
+        resultado_numero=operador_a_numero + operador_b_numero
+        mensaje="El resultado de la suma es: {0}".format(resultado_numero)
+        alert(title="Calculadora", message=mensaje)
 
     def btn_restar_on_click(self):
-        pass
+        operador_a_texto=self.txt_operador_a.get()
+        operador_b_texto=self.txt_operador_b.get()
+        operador_a_numero=int(operador_a_texto)
+        operador_b_numero=int(operador_b_texto)
+        resultado_numero=operador_a_numero - operador_b_numero
+        mensaje="El resultado de la resta es: {0}".format(resultado_numero)
+        alert(title="Calculadora", message=mensaje)
 
     def btn_multiplicar_on_click(self):
-        pass
+        operador_a_texto=self.txt_operador_a.get()
+        operador_b_texto=self.txt_operador_b.get()
+        operador_a_numero=int(operador_a_texto)
+        operador_b_numero=int(operador_b_texto)
+        resultado_numero=operador_a_numero * operador_b_numero
+        mensaje="El resultado de la multiplicacion es: {0}".format(resultado_numero)
+        alert(title="Calculadora", message=mensaje)
 
     def btn_dividir_on_click(self):
-        pass
+        operador_a_texto=self.txt_operador_a.get()
+        operador_b_texto=self.txt_operador_b.get()
+        operador_a_numero=int(operador_a_texto)
+        operador_b_numero=int(operador_b_texto)
+        resultado_numero=operador_a_numero / operador_b_numero
+        mensaje="El resultado de la divicion es: {0}".format(resultado_numero)
+        alert(title="Calculadora", message=mensaje)
         
 if __name__ == "__main__":
     app = App()
