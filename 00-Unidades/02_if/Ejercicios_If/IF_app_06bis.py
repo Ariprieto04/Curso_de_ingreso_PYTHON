@@ -39,7 +39,17 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        altura= int(self.txt_altura.get())
+        if altura < 160:
+            alert("Posicion final", "Base")
+        elif 160<= altura <180:
+            alert ("Posicion final", "Escolta")
+        elif 180 <=altura < 200:
+            alert("Posicion final", "Alero")
+        else:
+            alert("Posicion final", "Ala-Pivot o Pivot")
+        
+           
 
         
         
